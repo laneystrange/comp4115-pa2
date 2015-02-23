@@ -1,0 +1,9 @@
+	Event (name*:varchar, prize:int, city:varchar, state:varchar, winningTeamID)
+
+	Player (id*:int, firstName:varchar, lastName:varchar, handle:varchar, dob:date, country:varchar, gender:enum('M','F'))
+
+	Team (id*:int, teamName:varchar,dateFormed:date,dateDisbanded:date)
+
+	TeamMember (teamID*:int, memberID*:int)
+
+	MatchScore (id*:int, teamA:int, teamB:int, teamAWins:int, teamBWins:int, event:varchar)
