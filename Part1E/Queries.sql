@@ -1,0 +1,10 @@
+SELECT CONCAT(firstName,' ',lastName) AS realName,dob FROM Player WHERE gender = 'F';
+SELECT handle,CONCAT(firstName,' ',lastName) AS realName FROM Player WHERE country = "United States";
+SELECT * FROM MatchScore WHERE (teamAWins = 3 && teamBWins = 0) || (teamAwins = 0 && teamBWins = 3);
+SELECT SUM(prize) AS totalPrizeMoney FROM Event;
+SELECT COUNT(teamName) AS activeTeams FROM Team WHERE dateDisbanded IS NULL;
+SELECT DISTINCT CONCAT(firstName,' ',lastName) AS realName FROM Player join TeamMember ON Player.id = TeamMember.memberID join Team ON Team.id = TeamMember.teamID WHERE dateDisbanded IS NOT NULL;
+SELECT teamName AS mostSuccessfulTeam FROM Team JOIN Event ON Team.id = Event.winningTeamID GROUP BY Event.winningTeamID ORDER BY SUM(prize) DESC LIMIT 1;
+SELECT teamName AS winningestTeam FROM Team JOIN MatchScore ON (Team.id = MatchScore.teamA || Team.id = MatchScore.teamB) GROUP BY teamName ORDER BY COUNT(teamAWins = 3 || teamBWins = 3) DESC LIMIT 1;
+SELECT prize/3 AS individualPrize,Team.teamName FROM Event JOIN Team ON Event.winningTeamID = Team.id JOIN TeamMember ON Team.id = TeamMember.teamID JOIN Player ON TeamMember.memberID = Player.id WHERE Player.firstName = "Nathan" && Player.lastName = "Haney";
+SELECT state, count(state) AS eventsHeld FROM Event WHERE state = 'MS';
