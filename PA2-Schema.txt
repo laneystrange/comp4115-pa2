@@ -1,0 +1,17 @@
+Name: Michelle Daley 
+COMP 4115
+
+* - indicated Primary Key
+
+
+Players(id INT*, first_name VARCHAR(45), last_name VARCHAR(45), handle VARCHAR(45), DOB DATE, country VARCHAR(45), gender VARCHAR(1))
+
+Teams(name VARCHAR(45)*, date_formed DATE, date_disbanned DATE, player1_id INT, player2_id INT, player3_id INT, player4_id INT, player5_id INT, player6_id INT, player7_id INT)
+
+
+Tournament(event_name VARCHAR(45)*, date_begin DATE, date_ended DATE, grand_prize INT, city VARCHAR(45))
+
+
+Tourny_Match(event_name VARCHAR(45)*, team1 VARCHAR(45)*, team2 VARCHAR(45)*, match_date DATE, round VARCHAR(45), game1_win VARCHAR(45), game2_win VARCHAR(45), game3_win VARCHAR(45), game4_win VARCHAR(45), game5_win VARCHAR(45), winner VARCHAR(45))
+
+
