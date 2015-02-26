@@ -1,0 +1,13 @@
+These are the commands to load the csv.
+
+
+
+load data local infile 'members.csv' into table members fields terminated by ',';
+
+load data local infile 'matches.csv' into table matches fields terminated by ','(tourney,team1_name,team1_score,team2_name,team2_score,winner);
+
+load data local infile 'teams.csv' into table teams fields terminated by ',' (teamName, tourney, formed, disbanded, activity);
+
+load data local infile 'players.csv' into table players fields terminated by ',' (realName, handle, dob, country, gender);
+
+load data local infile 'tournaments.csv' into table tournaments fields terminated by ',';
