@@ -109,11 +109,11 @@ CREATE TABLE `teams` (
   `tourney` varchar(50) NOT NULL,
   `formed` date NOT NULL,
   `disbanded` date DEFAULT NULL,
-  `activity` enum('active','not active') NOT NULL,
+  `activity` enum('active','not active') DEFAULT NULL,
   PRIMARY KEY (`teamId`),
   KEY `tourney` (`tourney`),
   CONSTRAINT `teams_ibfk_1` FOREIGN KEY (`tourney`) REFERENCES `tournaments` (`eventName`)
-) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -138,6 +138,7 @@ CREATE TABLE `tournaments` (
   `prize` int(11) NOT NULL,
   `city` varchar(50) NOT NULL,
   `state` varchar(50) NOT NULL,
+  `winner` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`eventName`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -160,4 +161,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-25 23:25:27
+-- Dump completed on 2015-02-26  1:01:58
