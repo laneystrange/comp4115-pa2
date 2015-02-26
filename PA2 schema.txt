@@ -1,0 +1,12 @@
+﻿
+players(*id int(20),real_name varchar(20), handle varchar(20), DoB date, home_country varchar(20), gender varchar(1), team_name varchar(20))
+
+teams(*team_name varchar(20), player 1 varchar(20), player 2 varchar(20), player 3 varchar(20),  player 4 varchar(20), player 5 varchar(20), player 6 varchar(20), player 7 varchar(20), date_founded date, date_disbanded date) 
+
+
+
+events(*event_name varChar(20),event_date date, location varchar(20), grand_prize int(15), main_sponsor varchar(30), number_teams_attending int(3)) 
+
+ticket(*ticket_number int(10), status varChar(10))
+
+tournament_score( *event_name varChar(20), match_number int(2),winner varChar(20),loser varChar(20),winner_score int(1),loser_score(1),match_winner varChar(20),tournament_winner var Char(20))

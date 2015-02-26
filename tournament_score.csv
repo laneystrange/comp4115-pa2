@@ -1,0 +1,10 @@
+event_name,match_number,winner,loser,winner_score,loser_score,match_winner,tournament_winner
+"LCS",1,"Call Gaming","Curse Academy",3,0,"Call Gaming",
+"LCS",2,"Team Coast","TeamLolPro",3,0,"Team Coast",
+"LCS",3,"Noble Truth","Infinity",2,3,Infinity",
+"LCS",4,"Call Gaming","Team Fusion",3,0,"Call Gaming",
+"LCS",5,"Team Coast","Infinity",2,3,"Infinity",
+"LCS",6,"Call Gaming","Infinity",3,2,"Call Gaming","Call Gaming",
+"PLC Tournamnt2",1,"Infinity","Final Five",3,1,"Infinity",
+"PLC Tournamnt2",2,"Team Coast","Curse Academy",1,3,"Curse Academy",
+"PLC Tournamnt2",3,"Infinity","Curse Academy",1,3,"Curse Academy","Curse Academy"
