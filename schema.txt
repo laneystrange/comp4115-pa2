@@ -1,0 +1,9 @@
+players(id* INT, firstName VARCHAR, lastName VARCHAR, handle VARCHAR, dob DATE, country VARCHAR, gender ENUM('M','F'))
+
+teams(name* VARCHAR, founded DATE, disbanded DATE)
+
+roster(team* VARCHAR, playerId* INT)
+
+event(title* VARCHAR, startDate DATE, endDate DATE, prize DOUBLE, city VARCHAR, country VARCHAR, winner VARCHAR)
+
+match(teamOne* VARCHAR, teamTwo* VARCHAR, event* VARCHAR, matchOne ENUM(1,2), matchTwo ENUM(1,2), matchThree ENUM(1,2), matchFour ENUM(1,2,NULL), matchFive ENUM(1,2,NULL), winingTeam VARCHAR)
