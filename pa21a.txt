@@ -1,0 +1,9 @@
+teams(teamid* int, teamname varchar, dateformed DATE, datedisbanded DATE)
+
+players(playerid* int, playername varchar, teamid int, gender enum, handle varchar, DOB DATE)
+
+matchresults(tournamentid int, matchid* int, team1 int, team2 int, matchwinner int)
+
+games(matchid* int, gamewinner int, gid* int)
+
+tournamentinfo(tornamentid* int, grandprize int, tournamentname varchar, tournamentdate varchar, tournamentwinner int)
