@@ -1,0 +1,135 @@
+COMP4115 Spring 2015
+Programming Assignment #2
+Assigned: 17 February, 2015
+Deadline: 26 February, 2015
+
+mySQL Assignment: Game Tournament
+
+Imagine there is an adventure videogame called Shadowkeep (in fact,there used to be one, a text-based game I played on my Apple IIE, but
+it's long since disappeared!). Suppose that every year there is a big
+Shadowkeep tournament, with players and teams and sponsors and
+everything.
+
+Your job is to implement the database backend for a tournament results tracker. 
+
+Below, I've given some criteria for the kinds of things you need to
+keep track of. Consider them the minimum criteria, and feel free to
+add more columns and data for stuff you would like to have in such a
+database.
+
+Your system will have to keep track of all the players, each with a
+real name and a handle (a pseudonym used to drive fear into the hearts
+of their opponents). Neither name or handle is required to be unique,
+so each player will also need to have some kind of unique
+identification name/number. The date of birth, home country, and
+gender of each player are also tracked in the system.
+
+Your database will also track teams, each made up of 3-7 players. Your
+database is historical, so it keeps track of all teams past and
+present (for your input data, create at least 5 teams). At
+a minimum, you must track team names, members, date formed, and date
+disbanded.
+
+The big three-day Shadowkeep tournament happens every year. Your
+database tracks the dates of each event, a unique name for each event
+(e.g., "Shadowkeep 2014: The Fellowship"), the grand prize (some
+significant amount of money), and the location (it takes place in a
+different city every year).
+
+Finally, of course, you must track the results of each match at every
+tournament. A match consists of up to 5 games played between two
+teams. The first team to win 3 games wins the match. It is a "single
+elimination" tournament: as soon as one team loses a match, they are
+out of it for good. Therefore, with every round, half the teams are
+eliminated, so the number of teams permitted to enter any tournament
+must be a power of 2.
+
+PART 1A: 10 points: Schema
+
+First, provide a schema for your database system. Start with a simple
+written list of tables like the city/state/mayor/governor set-up we
+saw in Problem Set 2.
+
+Your schema should list all of the tables in your database, the
+columns (including datatype) in each table, and indicate the primary
+key with an asterisk or by underlining the field.
+
+You can submit your schema via github in a plaintext file or a Word doc.
+
+PART 1B: 15 points. Entity-relationship Diagram
+
+You must also provide an entity-relationship model for your
+database. Use draw.io or mySQL workbench (or another tool of your
+choice, or just hand-draw it and take a picture) to create it. You
+need not list every attribute of every table; however, it must include
+what you deem to be the 5 most important entities of your system.
+
+For each of the 5 entities, include in your ER diagram: 
+
+* At least one attribute 
+
+* Indicate whether it is a strong or weak entity 
+
+* Where appropriate, specify its relationship type to other entities ("plays
+at", for example).
+
+You must submit your Entity-relationship diagram as an image file.
+
+PART 1C: 20 points. Create the database
+
+For this part, create all the tables needed for your database. Save
+all of the commands you used to create your tables in a .sql file and
+submit that via GitHub.
+
+Muktadir and I will run your .sql commands to create your database for
+ourselves.
+
+PART 1C: 25 points. Populate the database.
+
+Create .csv files for all of your tables. You must provide at least 8
+rows of data per table.
+
+Use the appropriate SQL command to bulk upload your .csv files, and
+include your files as part of your github submission (again, Muktadir
+and I will recreate your populated tables as part of grading).
+
+PART 1D: 30 points. Run some queries.
+
+Suppose I want to know the answers to the following questions. Put
+together the SQL queries that will provide the correct answers, and
+save them in a separate .sql file. 
+
+You need not submit the results of running these queries as part of
+your solution, but make sure they're correct and submit your .sql file
+instead.
+
+Note that some of these questions require some knowledge of the data
+stored, which of course you'll be making up. Wherever I have a literal
+in brackets [likethis], assume that's a variable, and plug in some
+appropriate name, date, etc., that will make a good query against the
+data you actually have.
+
+* List the real name and birthdate of every female player.
+
+* Give the handle and real name of every player from [Croatia]. <-- replace with a country you have in your database.
+
+* List all matches where one team swept the other (i.e., the score was 3 games to 0).
+
+* How much total prize money has been given out since the tournament began?
+
+* How many teams are still active?
+
+* List the real names of players from the defunct teams, without repetition.
+
+* Which team has been the most successful (won the most money)?
+
+* Which team has been the winningest (won the most matches)?
+
+* How much money has player [PlayerName] won at tournaments, and playing for which teams?
+
+* Another query of your choosing. Ask something interesting about your data.
+
+
+
+
+
