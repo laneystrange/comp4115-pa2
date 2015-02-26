@@ -1,0 +1,48 @@
+Part 1A:::
+
+Need to record...Players (ID, real name, handle name, DoB, home country, gender)
+		Teams (3-7 players, team name, date formed, date disbanded)
+		Tournaments (name, date, grand prize, location [city])
+		Matches Played (up to 5 games per match (best of 3), 2x teams, winning team)
+
+Tables::
+Players(ID* int(11), 
+	first_name 	varchar(25),
+	last_name  	varchar(25),
+	handle     	varchar(15),
+	date_of_birth	date,
+	home_country	varchar(15),
+	gender		enum('male','female','n/a') );
+
+Teams(ID* int(11),
+	name		varchar(25),
+	date_formed	date,
+	date_disbanded	date
+	);
+
+Players_in_teams (team_id* int(11),
+	player_id*	int(11)
+	);
+
+Tournaments(ID* int(11),
+	name		varchar(25),
+	date		date,
+	prize		int(11),
+	location	varchar(20)
+	);
+
+Matches(ID* int(11),
+	tournament_id	int(11),
+	team_a_id	int(11),
+	team_b_id	int(11),
+	game_1_result	int(11), (Each result is a foreign key to the teams table. Must match team_a or team_b)
+	game_2_result	int(11),
+	game_3_result	int(11),
+	game_4_result	int(11),
+	game_5_result	int(11),
+	winner_id	int(11) 
+	);
+
+Not satisfied with the matches table.
+	
+	
