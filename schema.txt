@@ -1,0 +1,34 @@
+* = primary key
+
+Players(playerID* int,
+	Name varchar(),
+	Handle varchar(),
+	dateOfBirth date(),
+	country varchar(),
+)
+
+Teams( teamID* int,
+name varchar(),
+	Formed date(),
+	Disbanded date()
+)
+
+teamMembers(teamID* int,
+		playerID int,
+		handle varchar(30)
+)
+		
+
+Tournaments(name* varchar(30),
+	Prize int,
+	Location varchar()
+)
+
+Matches(matchID* int,
+teamA varchar(),
+	teamB varchar(),
+	teamAWins int,
+	teamBWins int,
+	tournamentName varchar(),
+	winner varchar()
+)
