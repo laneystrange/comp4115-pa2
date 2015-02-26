@@ -8,3 +8,4 @@ select sum(prize) as prizeSum from tournaments;
 
 select count(*) from teams where disbanded is null;
 
+select name from players where id in (select playerID from teamMembers where teamID in (select teamID from teams where disbanded is not null));
