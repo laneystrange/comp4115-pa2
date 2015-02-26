@@ -1,0 +1,10 @@
+SELECT dob,CONCAT_WS(' ',firstName,lastName) AS nameIRL FROM Player WHERE gender = 'F';
+SELECT alias,CONCAT_WS(' ',firstName,lastName) AS nameIRL FROM Player WHERE country = "Japan";
+SELECT * FROM Matches WHERE (teamOneWins = 3 && teamTwoWins = 0) || (teamOneWins = 0 && teamTwoWins = 3);
+SELECT SUM(grandPrize) AS allGrandPrize FROM Tournament;
+SELECT COUNT(name) AS active FROM Team WHERE dateDisbanded IS NULL;
+SELECT DISTINCT CONCAT(firstName,' ',lastName) AS realName FROM Player join TeamMember ON Player.id = TeamMember.playerID join Team ON Team.id = TeamMember.teamID WHERE dateDisbanded IS NOT NULL;
+SELECT name AS wonMostMoney FROM Team JOIN Tournament ON Team.id = Tournament.winner GROUP BY Tournament.winner ORDER BY SUM(grandPrize) DESC LIMIT 1;
+SELECT name AS wonMostMatches FROM Team JOIN Matches ON (Team.id = Matches.teamOne || Team.id = Matches.teamTwo) GROUP BY name ORDER BY COUNT(teamOneWins = 3 || teamTwoWins = 3) DESC LIMIT 1;
+SELECT grandPrize/3 AS playerShare,Team.name FROM Tournament JOIN Team ON Tournament.winner = Team.id JOIN TeamMember ON Team.id = TeamMember.teamID JOIN Player ON TeamMember.playerID = Player.id WHERE Player.firstName = "Timmy" && Player.lastName = "Traylor";
+SELECT state, count(state) AS numTournamentsIn FROM Tournament WHERE state = 'TN';
