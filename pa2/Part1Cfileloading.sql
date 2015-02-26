@@ -1,0 +1,5 @@
+LOAD DATA LOCAL INFILE 'C:/Users/Sarah/p2/player.csv' INTO TABLE Player FIELDS TERMINATED BY ' ';
+LOAD DATA LOCAL INFILE 'C:/Users/Sarah/p2/team.csv' INTO TABLE Team FIELDS TERMINATED BY ' ';
+LOAD DATA LOCAL INFILE 'C:/Users/Sarah/p2/teammember.csv' INTO TABLE TeamMember FIELDS TERMINATED BY ' ';
+LOAD DATA LOCAL INFILE 'C:/Users/Sarah/p2/tournament.csv' INTO TABLE Tournament FIELDS TERMINATED BY ' ';
+LOAD DATA LOCAL INFILE 'C:/Users/Sarah/p2/match.csv' INTO TABLE Matches FIELDS TERMINATED BY ' ';
