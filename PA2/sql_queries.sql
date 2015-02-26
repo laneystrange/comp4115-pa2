@@ -1,0 +1,10 @@
+select firstName, lastName, DOB from Players where gender = " F";
+select handle, firstName, lastName from Players where country = " Russia";
+select winner from Matches where sweepStats = " sweep";
+select sum(grandPrize) from Tourney;
+select count(distinct(name)) from Teams where dissolveDate = 0;
+select firstName, lastName from Players where id in (select id from Teams where dissolveDate > 0);
+select Results.winner, max(Tourney.grandPrize) from Tourney inner join Results on Results.matchName=Tourney.matchName where (select sum(grandPrize));
+select count(*) as cnt1, winner from Matches group by winner having cnt1 = (select count(*) as cnt2 from Matches group by winner order by cnt2 desc limit 1); 
+select firstName, lastName from Players where 1=1 || 2=2;
+select count(*) from Players where country != " USA";
