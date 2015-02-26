@@ -1,0 +1,5 @@
+team(teamid* int,name varchar2(20),members int,date_formed date,date_disbanded date)
+Event(eventid* int,name varchar(20), date date, prize_amount int, location varchar2(20),Ewinnerid int)
+player(pid* int,teamid int, name varchar(20), handle varchar(20), dob date,home_country varchar, gender enum('female','male'))
+match(matchid* int,eventid int,teamAid,teamBid,Mwinner)
+Game((Gameid,matchid)*,Gwinner)
