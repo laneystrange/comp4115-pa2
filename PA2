@@ -1,0 +1,28 @@
+1A
+
+
+player (playerID* int,name varchar,nickname varchar ,DOB date ,Nationality varchar,Gender ernum 'M' or 'F')
+						
+team (teamID* int ,teamName varchar ,dateFormed date ,dateDisbanded date ) 
+
+teamMember (PlayerID* int, teamID int)
+						
+Tournament (TournamentName* varchar ,Date date ,prize int ,location varchar, teamwinner int)
+						
+Matches (MatchID* int ,teamA int,teamB int, teamAwins int, teamBwins int, tournamentName  varchar) 
+
+						
+1B.
+
+see PA2tables.sql
+
+1D.
+
+see loaddata.sql
+
+1E.
+
+See PA2queries.sql
+Elective query: Have many matches has the winnigest team won?
+
+
