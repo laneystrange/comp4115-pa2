@@ -1,0 +1,10 @@
+a)
+player(id* int, firstName varchar, secondName varchar, handle varchar, dob date, country varchar, gender enum('m','f'))
+
+team(name* varchar, formed date, disbanded date)
+
+roster(team* varchar, playerid* int)
+
+event(title* varchar, startDate date, endDate date, prize double, city varchar, country varchar, winner varchar)
+
+match(teamOne* varchar, teamTwo* varchar, event* varchar, matchOne enum(1,2), matchTwo enum(1,2), matchThree enum(1,2), matchFour enum(1,2,0), matchFive enum(1,2,0), winner varchar)
